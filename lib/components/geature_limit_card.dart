@@ -17,7 +17,7 @@ class FeatureLimitCard extends StatelessWidget {
       child: Text(
         '$label: $value',
         style: TextStyle(
-          fontSize: 14,
+          fontSize: 12,
           fontWeight: FontWeight.w500,
           color: Colors.grey.shade700,
         ),

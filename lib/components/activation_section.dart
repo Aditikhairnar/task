@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import 'feature_row.dart';
@@ -10,7 +12,7 @@ class ActivationSection extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
-      elevation: 4,
+      elevation: 1,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -26,9 +28,8 @@ class ActivationSection extends StatelessWidget {
                       Text(
                         'Activate your LifelineCard',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blue.shade900,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -38,15 +39,14 @@ class ActivationSection extends StatelessWidget {
                             TextSpan(
                               text: '₹ 3499/- Life Time\n',
                               style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
                                 color: Colors.green.shade700,
                               ),
                             ),
                             TextSpan(
                               text: '₹ 9999/Year',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 color: Colors.redAccent,
                                 decoration: TextDecoration.lineThrough,
                               ),
@@ -72,7 +72,7 @@ class ActivationSection extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ),
@@ -101,9 +101,8 @@ class ActivationSection extends StatelessWidget {
             Text(
               'Our Features',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue.shade900,
               ),
             ),
             const SizedBox(height: 8),

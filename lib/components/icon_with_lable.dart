@@ -34,8 +34,7 @@ class FeatureIconWithLabel extends StatelessWidget {
           label,
           style: TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 14,
+            fontSize: 12,
           ),
         ),
       ],

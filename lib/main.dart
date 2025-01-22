@@ -29,9 +29,9 @@ class CardWalletScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CardStatusSection(),
-                SizedBox(height: 16),
+                SizedBox(height: 5),
                 ActivationSection(),
-                SizedBox(height: 16),
+                SizedBox(height: 5),
                 WalletSection(),
               ],
             ),

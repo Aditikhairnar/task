@@ -5,12 +5,14 @@ class WalletCard extends StatelessWidget {
   final String amount;
   final String subtitle;
   final Color? subtitleColor;
+  final String imageUrl; // Added imageUrl parameter
 
   const WalletCard({
     required this.title,
     required this.amount,
     required this.subtitle,
     this.subtitleColor,
+    required this.imageUrl, // Added imageUrl parameter
   });
 
   @override
@@ -20,33 +22,43 @@ class WalletCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    imageUrl,
+                    width: 40,
+                    height: 40,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       title,
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 4),
                     Text(
                       subtitle,
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 12,
                         color: subtitleColor ?? Colors.black54,
                       ),
                     ),
                   ],
                 ),
+                Spacer(), // Spacer between text and amount
+                // Amount placed after title and subtitle
                 Text(
                   amount,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
